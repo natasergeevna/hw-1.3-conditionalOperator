@@ -7,6 +7,11 @@ public class Main {
        task5p1();
        task6p1();
        task7p1();
+       task1p2();
+       task2p2();
+       task3p2();
+       task4p2();
+       task5p2();
     }
 
     public static void task1p1(){
@@ -114,6 +119,100 @@ public class Main {
                 System.out.println("three > two");
             }
             System.out.println("two > one");
+        }
+        System.out.println();
+    }
+
+    public static void task1p2(){
+        System.out.println("---task1---");
+        int clientOS = 1;
+        if (clientOS == 1){
+            System.out.println("Установите версию приложения для Android по ссылке");
+        } else if (clientOS == 0) {
+            System.out.println("Установите версию приложения для IOS по ссылке");
+        }
+        System.out.println();
+    }
+
+    public static void task2p2(){
+        System.out.println("---task2---");
+        int clientOS = 1;
+        int clientDeviceYear = 2015;
+        if (clientOS == 1){
+            if (clientDeviceYear <= 2015){
+                System.out.println("Установите облегченную версию приложения для Android по ссылке");
+            }
+            else {
+                System.out.println("Установите версию приложения для Android по ссылке");
+            }
+        }
+        else if (clientOS == 0){
+            if (clientDeviceYear <= 2015){
+                System.out.println("Установите облегченную версию приложения для IOS по ссылке");
+            }
+            else {
+                System.out.println("Установите версию приложения для IOS по ссылке");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void task3p2(){
+        System.out.println("---task3---");
+        int year = 2023;
+        if (year >= 1584) {
+            if (((year % 4 == 0) && (year % 100 != 0)) || (year % 400 == 0)) {
+                System.out.println(year + " - високосный год");
+            }
+            else {
+                System.out.println(year + " - не високосный год");
+            }
+        }
+        System.out.println();
+    }
+
+    public static void task4p2(){
+        System.out.println("---task4---");
+        int deliveryDistance = 95;
+        if (deliveryDistance <= 20){
+            System.out.println("Потребуется 1 день для доставки");
+        } else if (deliveryDistance > 25 && deliveryDistance <= 60) {
+            System.out.println("Потребуется 2 дня для доставки");
+        } else if (deliveryDistance > 60 && deliveryDistance <= 100) {
+            System.out.println("Потребуется 3 дня для доставки");
+        }
+        else {
+            System.out.println("Доставки нет!");
+        }
+        System.out.println();
+    }
+
+    public static void task5p2(){
+        System.out.println("---task5---");
+        int monthNumber = 12;
+        switch (monthNumber){
+            case 12:
+            case 1:
+            case 2:
+                System.out.println("winter");
+                break;
+            case 3:
+            case 4:
+            case 5:
+                System.out.println("spring");
+                break;
+            case 6:
+            case 7:
+            case 8:
+                System.out.println("summer");
+                break;
+            case 9:
+            case 10:
+            case 11:
+                System.out.println("autumn");
+                break;
+            default:
+                System.out.println("Такого месяца нет!");
         }
     }
 }
